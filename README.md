@@ -7,9 +7,9 @@ Node.js library for writing wiibrewjs apps.
 ## Usage
 
 ```javascript
-const app = require('wiibrewjs')('ip-address-of-your-wii')
+const app = require('wiibrewjs')()
 
-app.on('buttondown', (btn) => {
-    console.log('Pressed button: %s', btn)
+app.init('ip-address-of-your-wii').then(() => {
+    // ...
 })
 ```
